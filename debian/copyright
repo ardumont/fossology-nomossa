@@ -1,0 +1,11 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: fossology
+Source: https://github.com/fossology/fossology
+
+Files: *
+Copyright: 2007-2012 HP Development Company, L.P. and others.
+License: GPL-2+
+
+Files: libfossdb, libfossrepo
+Copyright: 2007-2012 HP Development Company, L.P. and others.
+License: LGP-2+

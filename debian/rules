@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+# export DH_VERBOSE=1
+DPKG_EXPORT_BUILDFLAGS = 1
+
+export DEB_BUILD_OPTIONS = nocheck
+# export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+# export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	cd src/nomos/agent/ && make -f Makefile.sa all
+
+override_dh_auto_install:
+	dh_install src/nomos/agent/nomossa usr/bin
+
+# override_dh_auto_install:
+# 	cd src/nomos/agent && make -f Makefile.sa install MODDIR=debian/tmp/usr/bin

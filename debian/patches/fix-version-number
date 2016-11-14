@@ -1,0 +1,17 @@
+Index: fossology/Makefile.conf
+===================================================================
+--- fossology.orig/Makefile.conf
++++ fossology/Makefile.conf
+@@ -132,9 +132,9 @@ FO_CXXFLAGS = -I$(CXXFOLIBDIR) $(FO_CFLA
+ FO_CXXLDFLAGS = -lfossologyCPP -L$(CXXFOLIBDIR) -lstdc++ $(FO_LDFLAGS)
+ 
+ # define VERSION and COMMIT_ID
+-VERSION=`git describe --tags > /dev/null 2>&1 && git describe --tags | head -1 || echo "unknown"`
+-BRANCH=`git rev-parse --abbrev-ref HEAD > /dev/null 2>&1 && git rev-parse --abbrev-ref HEAD | head -1 || echo "unknown"`
+-COMMIT_HASH=`git show > /dev/null 2>&1 && git show | head -1 | awk '{print substr($$2,1,6)}' || echo "unknown"`
++VERSION=3.1.0rc2-31-ga2cbb8c
++BRANCH=master
++COMMIT_HASH=a2cbb8c
+ 
+ export PATH := $(TOP)/src/vendor/bin:$(PATH)
+ 
