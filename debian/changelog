@@ -1,3 +1,9 @@
+fossology (3.1-1~bpo8~swh+1) jessie-backports-swh; urgency=medium
+
+  * Rebuild for jessie-backports-swh
+
+ -- Antoine R. Dumont (@ardumont) <antoine.romain.dumont@gmail.com>  Tue, 15 Nov 2016 12:50:37 +0100
+
 fossology (3.1-1) unstable; urgency=medium
 
   * Initial release
